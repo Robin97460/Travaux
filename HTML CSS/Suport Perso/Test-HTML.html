@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Html</title>
+        <link rel="shortcut icon" href="./Assets/Logo-html.png" />
+    </head>
+    <body>
+        <header>
+            <h1>Test Html</h1>
+            <ul>
+                <li>Menu</li>
+                <li>Boutique</li>
+                <li><a href="#Formulaire">Formulaire</a></li>
+            </ul>
+            <p>texte <em>Italique</em> <strong>Gras</strong></p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nesciunt consequuntur maiores ullam corrupti, illo voluptas
+                molestiae laboriosam nisi delectus vitae similique porro qui
+                accusantium aperiam corporis repellendus iste. Quia illo aliquid
+                aspernatur, atque officiis fuga obcaecati sit id deleniti!
+            </p>
+        </header>
+
+        <main>
+            <h2><em>Ordered List</em></h2>
+            <ol>
+                <li>UNO</li>
+                <li>DOS</li>
+            </ol>
+            <h2>Image</h2>
+            <img src="./Assets/Forêt.webp" height="270" alt="Photo de forêt" />
+
+            <div>
+                <h2>Tableau</h2>
+                <table
+                    border="5"
+                    cellpadding="10"
+                    cellsapcing="6"
+                    style="text-align: center"
+                >
+                    <thead>
+                        <tr>
+                            <th>Col 1</th>
+                            <th>Col 2</th>
+                            <th>Col 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Cell 1</td>
+                            <td>Cell 2</td>
+                            <td>Cell 3</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Cell 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3><span>&#128526;</span>Link</h3>
+                <a href="https://htmlcheatsheet.com" target="_blank"
+                    >Html Cheat Sheet</a
+                >
+            </div>
+            <div>
+                <h3>Vidéo</h3>
+                <video
+                    src="./Assets/Vid-Foret.mp4"
+                    autoplay
+                    muted
+                    height="270"
+                    loop
+                ></video>
+            </div>
+            <div>
+                <a href="https://www.google.fr/maps" target="_blank"
+                    ><img
+                        src="./Assets/Map.png"
+                        alt="Logo Google Map"
+                        height="150"
+                /></a>
+            </div>
+        </main>
+        <footer>
+            <h3 id="Formulaire">Formulaire</h3>
+            <form action="">
+                <label for="name">Nom</label>
+                <input type="text" id="name" placeholder="Entrez votre Nom" />
+
+                <br />
+
+                <label for="age">Age</label>
+                <input type="number" id="age" value="18" min="13" max="99" />
+
+                <br />
+
+                <label for="gender">Genre</label>
+                <select name="Genre" id="gender">
+                    <option value="Man">Homme</option>
+                    <option value="Woman">Femme</option>
+                    <option value="Other" selected>Autre</option>
+                </select>
+
+                <br />
+
+                <label for="right">Droite</label>
+                <input type="radio" name="Hand" id="right" />
+
+                <label for="Left">Gauche</label>
+                <input type="radio" name="Hand" id="Left" />
+
+                <label for="Two">Les 2</label>
+                <input type="radio" name="Hand" id="Two" />
+
+                <div>
+                    <textarea
+                        name="Zone de Texte"
+                        id="TXT"
+                        placeholder="Entrez votre requete..."
+                        cols="35"
+                        rows="10"
+                    ></textarea>
+
+                    <br />
+
+                    <input type="submit" value="Valider" />
+                </div>
+            </form>
+        </footer>
+    </body>
+</html>

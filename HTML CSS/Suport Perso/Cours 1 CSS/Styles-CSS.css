@@ -1,0 +1,171 @@
+body{
+    background-image: url(./Assets/BG-Star.jpg);
+    min-height: 100vh;
+    font-family: 'Segoe UI' ;
+}
+h1{
+    text-align: center;
+    font-size: 8vw;
+    letter-spacing: 5px;
+    text-shadow: -2px 2px 6px rgba(17, 255, 0, 0.595);
+    text-decoration: underline;
+    font-family: Tahoma, sans-serif;
+    color: white;
+}
+
+#sun {
+    height: 1000px;
+    position: absolute;
+    bottom: 70%;
+    right: 70%;
+}
+main{
+    min-height: 500px;
+    width: 80%;
+    margin: auto;
+    border: 2px solid greenyellow;
+    box-shadow: 0 0 20px 4px greenyellow;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+h2{
+    margin: 0;
+}
+
+.flexbox, .grid, .absolute{
+    border: 0px solid  greenyellow;
+    box-shadow: 0 0 5px 2px rgba(172, 255, 47, 0.652);
+    padding: 10px;
+    text-align: center;
+    color: yellow;
+    text-shadow: -2px 2px 6px rgba(17, 255, 0, 0.595);
+    margin: 5px;
+    min-height: 100px;
+}
+
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 130px;
+}
+
+.flexbox li {
+    height: 170px;
+    width: 100%;
+    list-style: none;
+    text-decoration: underline;
+    text-shadow: -2px 2px 3px rgb(17, 255, 0);
+    margin: 5px;
+    a {
+        color: greenyellow;
+    }
+}
+
+
+.grid-in{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.grid{
+    color: rgb(75, 42, 0);
+    text-shadow: -2px 2px 6px rgba(17, 255, 0, 0.595);
+}
+#form{
+    display: grid;
+}
+
+#form input{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    margin: 5px;
+    color: greenyellow;
+    font-family: 'Segoe UI';
+    font-size: 1.1rem;
+}
+
+#Quest{
+    cursor: text;
+    transition: 1s;
+}
+#Quest:hover{
+    border: 2px outset rgba(184, 250, 250, 0.167);
+    background-color: rgba(184, 250, 250, 0.167);
+}
+
+#Btn{
+    cursor:pointer;
+    transition: 0.25s;
+}
+#Btn:hover{
+    text-shadow: 0 0 5px greenyellow;
+    background-color: rgba(184, 250, 250, 0.167);
+    
+}
+
+#neptune{
+    width: 90%;
+    margin: 20px;
+}
+
+.absolute{
+    position: relative;
+    height: 400px;
+}
+
+#jupiter{
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#saturne {
+    width: 60%;;
+    position: absolute;
+    top: -30px;
+    right: -90px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 820px) {
+    .grid-in {
+        display: block;
+        
+    }
+    #neptune{
+        width: 40%;
+        margin-top: -10px;
+    }
+    #saturne{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 720px){
+    #jupiter {
+        height: 150px;
+    }
+    .absolute{
+        height: 200px;
+    }
+    .flexbox ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .flexbox li {
+        height: 100px;
+        margin: 20px;
+        margin-left: 0px;
+    }
+    .flexbox{
+        height: 300px;
+        right: -100px;
+    }
+    #form input, textarea {
+        font-size: 0.8rem;
+    }
+}

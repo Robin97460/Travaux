@@ -1,0 +1,374 @@
+/* Ce documetn HTML/CSS n'est pas encore responsive */
+:root {
+    --color1: rgb(253, 253, 253);
+    --color2: #2e2f2f ;
+    --color3: #f66f27 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: url(./Assets/BG.webp) center/cover;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+h1{
+    color: var(--color3);
+    text-align: center;
+    padding: 0px 15px 10px;
+    margin-bottom: 20px;
+}
+
+
+.card {
+    background: rgba(0, 0, 0, 0.607);
+    color: var(--color1);
+    width: calc(100% - 100px);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.516);
+    backdrop-filter: blur(4px);
+    padding: 10px 15px 10px;
+}
+.card:before{
+    content: "\2126";
+    position: absolute ;
+    font-size: 2rem;
+    right: 5px;
+    top: 0px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Par Pol"
+    "Par Pol"
+    "For Pol";
+    min-height: 200px;
+}
+.paragraphe{
+    margin-bottom: 30px;
+    line-height: 25px;
+    grid-area: Par;
+    padding-bottom: 0;
+    text-align: justify;
+}
+.paragraphe::selection{
+    background: var(--color3);
+    color: var(--color2);
+}
+
+
+.polygones{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+    "p1 p2"
+    "p1 p2"
+    "t1 t2";
+    text-align: center;
+    justify-items: center;
+    grid-area: Pol;
+}
+/* Pour faire l'ombre d'un polygone il faut utiliser la commande "filter:drop-shadow()" et la placer dans le parent du polygone concerné */
+.P1{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    min-width: 195px;
+    width: 90%;
+    max-width: 200px;
+    grid-area: p1;
+    max-height: 332px;
+}
+
+.P2{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    min-width: 195px;
+    width: 90%;
+    max-width: 200px;
+    grid-area: p2;
+    max-height: 332px;
+}
+
+
+.form{
+    text-align: center;
+}
+
+.radio{
+    display: flex;
+    margin: 10px 30px 20px;
+    justify-content: space-around;
+    perspective: 100px;
+}
+input[type="radio"]{
+    display: none;
+}
+label {
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: var(--color2);
+    padding: 5px 30px 5px;
+    border-radius: 50px;
+    transition: 0.5s;
+    user-select: none;
+}
+
+label:nth-child(2):hover {
+    animation: label 1s infinite linear;
+}
+label:nth-child(4):hover {
+    animation: label 1s infinite linear;
+}
+
+@keyframes label {
+    50%{
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+label:nth-child(6):hover{
+    animation: label2 3s infinite linear;
+}
+
+@keyframes label2 {
+    25%{
+        transform: translateZ(25px);
+    }
+    50%{
+        transform: translateZ(0px);
+    }
+    75%{
+        transform: translateZ(-25px);
+    }
+    100%{
+        transform: translateZ(0px);
+    }
+}
+
+
+input[type="radio"]:checked + label{
+    background: var(--color3);
+    color: var(--color2);
+    border: 2px solid var(--color1);
+}
+
+.answer input{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 12px;
+    border-radius: 50px;
+    background: var(--color2);
+    color: var(--color3);
+    font-size: 1.3rem;
+    border: 5px outset var(--color1);
+    min-width: 250px;
+    width: 80%;
+    max-width: 450px;
+    transition: 0.56s;
+    outline: none;
+}
+
+#answer:hover{
+    border: 5px outset var(--color3);
+    color: var(--color1);
+    outline: none;
+}
+#answer:focus{
+    border: 5px outset var(--color3);
+    color: var(--color1);
+    outline: none;
+}
+
+.button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Vi btn"
+    "Vi Qu";
+    position: relative;
+    perspective: 100px;
+}
+button{
+    display: block;
+    grid-area: btn;
+    transform: translateY(-85px);
+    cursor: pointer;
+    padding: 10px 20px;
+    background: var(--color2);
+    box-shadow: 0px 0px 20px 1px var(--color1);
+    color: var(--color1);
+    border: 0;
+    border-radius: 4000px;
+    font-size: 2rem;
+    min-width: 100px;
+    width: auto;
+    max-width: 400px;
+    margin: auto;
+    transition: 0.4s;
+}
+button:hover{
+    color: var(--color3);
+    box-shadow: 0px 0px 20px 5px rgb(0, 255, 0);
+}
+
+#Qu{
+    grid-area: Qu;
+    text-align: center;
+    font-style:italic;
+    color: var(--color3);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+button:hover + #Qu{
+    transform: translateY(-85px);
+    opacity: 1;
+}
+
+.button::after{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
+    height: 18px;
+    border-radius: 150px;
+    width: 100%;
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%) scaleX(0);
+    animation: lineanimation 20s forwards;
+}
+
+@keyframes lineanimation{
+    100% {
+        transform: translateX(50%) scaleX(1);
+    }
+}
+
+#cours{
+    position: absolute;
+    text-align: center;
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 1;
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    animation: apparition 20s forwards;
+}
+
+@keyframes apparition{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(50%) translateZ(-50px);
+    }
+    80%{
+        opacity: 0;
+        visibility: visible;
+    }
+    90%{   
+        transform: translateX(50%) translateZ(-50px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(50%) translateZ(0px);
+    }
+}
+
+
+#img1{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 10%;
+    right: 0%;
+    animation: equerre 60s infinite linear;
+    z-index: -1;
+}
+
+@keyframes equerre{
+    0%{
+        top: 10%;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+    10%{
+        top: 0%;
+        right: 20%;
+        transform: rotate(72deg);
+    }
+    20%{
+        top: -10%;
+        right: 50%;
+        transform: rotate(144deg);
+    }
+    30%{
+        top: 20%;
+        right: 80%;
+        transform: rotate(216deg);
+    }
+    40%{
+        top: 50%;
+        right: 90%;
+        transform: rotate(288deg);
+    }
+    50%{
+        top: 70%;
+        right: 70%;
+        transform: rotate(360deg);
+    }
+    60%{
+        top: 80%;
+        right: 55%;
+        transform: rotate(432deg);    
+    }
+    70%{
+        top: 60%;
+        right: 30%;
+        transform: rotate(504deg);
+    }
+    80%{
+        top: 40%;
+        right: 5%;
+        transform: rotate(576deg);
+    }
+    90%{
+        top: 20%;
+        right: -20%;
+        transform: rotate(648deg);
+    }
+    91%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        top: 10%;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+}
+
+#egg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+}
