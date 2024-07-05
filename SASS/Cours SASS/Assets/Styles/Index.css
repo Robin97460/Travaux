@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background: rgb(239, 233, 233);
+}
+
+main {
+  height: 800px;
+  margin: 15px;
+  border: 1px solid rgb(36, 33, 106);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../Image/Photo\ Stade.webp) center/cover;
+}
+main p {
+  text-align: center;
+  color: rgb(13, 12, 12);
+  background: rgba(255, 255, 255, 0.442);
+  border: 1px solid rgb(36, 33, 106);
+  border-radius: 20px;
+  padding: 0 5px;
+  margin: 0 15px;
+}
+
+nav {
+  background: rgb(228, 28, 19);
+  border-bottom: 5px solid rgb(36, 33, 106);
+  min-height: 30px;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+nav ul li {
+  list-style: none;
+  padding: 0 5px;
+  color: white;
+  background: rgb(36, 33, 106);
+  border-radius: 15px;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(228, 28, 19)), color-stop(86%, rgb(36, 33, 106)));
+  background: linear-gradient(90deg, rgb(228, 28, 19) 0%, rgb(36, 33, 106) 86%);
+  color: white;
+  padding: 20px 0;
+}
+header h1 {
+  text-align: center;
+}
+header img {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(228, 28, 19)), color-stop(86%, rgb(36, 33, 106)));
+  background: linear-gradient(90deg, rgb(228, 28, 19) 0%, rgb(36, 33, 106) 86%);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .left img {
+  max-width: 80%;
+  max-height: 80%;
+}
+footer .midle {
+  height: 100%;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "p p" "NB BL";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .midle p {
+  color: white;
+  text-decoration: underline;
+  text-shadow: -4px 6px 6px rgb(13, 12, 12);
+  grid-area: p;
+}
+footer .midle img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 20px;
+}
+footer .right img {
+  max-width: 100%;
+  max-height: 100%;
+}/*# sourceMappingURL=Index.css.map */

@@ -1,0 +1,20 @@
+body{
+    background: rgb(239, 233, 233);
+}
+
+main{
+    height: 800px;
+    margin: 15px;
+    border: 1px solid $color2;
+    @include childcenter();
+    background: url(../Image/Photo\ Stade.webp) center/cover;
+    p {
+        text-align: center;
+        color: $black;
+        background: rgba(255, 255, 255, 0.442);
+        border: 1px solid $color2;
+        border-radius: 20px;
+        padding: 0 5px;
+        margin: 0 15px;
+    }
+}

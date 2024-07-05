@@ -1,0 +1,23 @@
+$color1: rgba(228,28,19,1);
+$color2: rgba(36,33,106,1);
+$color3: white;
+$black: rgb(13, 12, 12);
+
+@mixin childcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin childspacearound {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}

@@ -1,0 +1,17 @@
+header{
+    background: linear-gradient(90deg, $color1 0%, $color2 86%);
+    color: $color3;
+    padding: 20px 0;
+
+    h1{
+       text-align: center;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+        height: 50px;
+        width: 50px;
+    }
+
+}

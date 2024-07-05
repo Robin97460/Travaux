@@ -1,0 +1,45 @@
+footer {
+    background: linear-gradient(90deg, $color1 0%, $color2 86%);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+
+    .left {
+        img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    }
+
+    .midle {
+        height: 100%;
+        margin: 15px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas:
+            "p p"
+            "NB BL";
+        align-items: center;
+
+        p {
+            color: white;
+            text-decoration: underline;
+            text-shadow: -4px 6px 6px $black;
+            grid-area: p;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 20px;
+        }
+    }
+    .right {
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

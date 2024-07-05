@@ -1,0 +1,8 @@
+// Ce fichier sers à importé et  compiler tous les autres fichiers scss vers le fichier css
+
+@import "./settings";
+@import "./Page/Home";
+@import "./Layout/nav";
+@import "./Layout/header";
+@import "./Layout/footer";
+@import "./Components/button";

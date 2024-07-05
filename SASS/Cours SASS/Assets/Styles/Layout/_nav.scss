@@ -1,0 +1,16 @@
+nav{
+    background: $color1;
+    border-bottom : 5px  solid $color2;
+    min-height: 30px;
+    ul{
+        @include childspacearound();
+        height: 40px;
+        li{
+            list-style: none;
+            padding: 0 5px;
+            color: $color3;
+            background: rgb(36,33,106);
+            border-radius: 15px;
+        }
+    }
+}
