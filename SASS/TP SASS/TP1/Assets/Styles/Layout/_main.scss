@@ -1,0 +1,107 @@
+main {
+    background: $white;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    .first {
+        position: relative;
+        padding: 0 10% 90px;
+        span {
+            display: block;
+            padding: 60px 0;
+            position: relative;
+
+            &::before {
+                content: "";
+                @include line();
+                height: 1px;
+                width: 30%;
+                top: 50%;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                @include line();
+                height: 1px;
+                width: 30%;
+                top: 50%;
+                right: 0;
+            }
+        }
+
+        h2 {
+            @include title();
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 13px;
+            font-style: italic;
+            line-height: 35px;
+            margin: 30px auto;
+            width: 60%;
+        }
+
+        .picture {
+            img {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+        }
+
+        &::after {
+            content: "";
+            @include line();
+            height: 1px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    .second {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 60px 0;
+        position: relative;
+
+        & > div {
+            margin: 0 auto;
+            width: 65%;
+
+            span {
+                font-size: 0.75rem;
+            }
+
+            h3 {
+                @include title();
+                line-height: 28px;
+                margin: 20px 0;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            p {
+                text-align: left;
+                font-size: 13px;
+                font-style: italic;
+                line-height: 30px;
+                margin-bottom: 35px;
+            }
+        }
+
+        .left-part::after {
+            content: "";
+            @include line();
+            width: 1px;
+            height: 100%;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+header {
+    min-height: 100vh;
+    color: $white;
+    position: relative;
+    background: $black;
+    animation: AnimColor 2s forwards;
+
+    @keyframes AnimColor {
+        to {
+            background: none;
+        }
+    }
+
+    .top {
+        min-height: 100vh;
+        @include CenterFlex();
+        flex-direction: column;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: AnimTop 1.5s forwards;
+
+        @keyframes AnimTop {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: "inter", sans-serif;
+            font-weight: 700;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        p {
+            width: 85%;
+            margin: 40px auto 60px;
+            font-family: "merri", serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        span {
+            a {
+                transition: 1s;
+            }
+            height: 60px;
+            width: 60px;
+            @include CenterFlex();
+            border: 2px solid $white;
+            border-radius: 150px;
+            i {
+                color: $white;
+                font-weight: 900;
+                font-size: 19px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    nav {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.27);
+
+        .nav-left {
+            &:hover li:not(:hover) {
+                background: none;
+                color: $white;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+
+            li {
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                border: none;
+                height: 65px;
+                font-family: "inter", sans-serif;
+                font-weight: 400;
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                &:nth-child(1) {
+                    background: $white;
+                    color: $black;
+                }
+                &:hover {
+                    background: $white;
+                    color: $black;
+                }
+            }
+        }
+
+        .nav-right {
+            min-width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

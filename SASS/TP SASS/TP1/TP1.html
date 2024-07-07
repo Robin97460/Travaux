@@ -40,73 +40,80 @@
         </nav>
     </header>
     <main id="main">
-        <p>April 25, 2017</p>
-        <h2>AND THIS IS A MASSIVE HEADLINE</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti iusto quisquam doloribus ullam voluptates
-            consequatur voluptatem aspernatur possimus, aliquid esse, dignissimos nostrum aut velit sapiente.
-        </p>
-        <div class="photo">
-            <img src="./Assets/Images/pic01.jpg" alt="picture of a man jumping on a roc in a mountainous desert"
-                width="200px">
-        </div>
-        <button>FULL STORY</button>
-        <div class="left-part">
-            <p>April 24, 2017</p>
-            <h3>Sed magna ipsum faucibus</h3>
-            <img src="./Assets/Images/pic02.jpg" alt="Picture of a forest">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum voluptatum, vitae ipsum placeat qui
-                voluptas quia laudantium ipsam cupiditate odit.</p>
+        <div class="first">
+            <span>April 25, 2017</span>
+            <h2>AND THIS IS A <br>MASSIVE HEADLINE</h2>
+            <p id="second-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti iusto quisquam doloribus ullam
+                voluptates
+                consequatur voluptatem aspernatur possimus, aliquid esse, dignissimos nostrum aut velit sapiente.
+            </p>
+            <div class="picture">
+                <img src="./Assets/Images/pic01.jpg" alt="picture of a man jumping on a roc in a mountainous desert"
+                    width="200px">
+            </div>
             <button>FULL STORY</button>
         </div>
-        <div class="right-part">
-            <p>April 22, 2017</p>
-            <h3>Primis eget imperdiet lorem</h3>
-            <img src="./Assets/Images/pic02.jpg" alt="Picture of a mountain">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum voluptatum, vitae ipsum placeat qui
-                voluptas quia laudantium ipsam cupiditate odit.</p>
+        <div class="second">
+            <div class="left-part">
+                <span>April 24, 2017</span>
+                <h3>Sed magna ipsum faucibus</h3>
+                <img src="./Assets/Images/pic02.jpg" alt="Picture of a forest">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum voluptatum, vitae ipsum placeat qui
+                    voluptas quia laudantium ipsam cupiditate odit.</p>
+                <button>FULL STORY</button>
+            </div>
+            <div class="right-part">
+                <span>April 22, 2017</span>
+                <h3>Primis eget imperdiet lorem</h3>
+                <img src="./Assets/Images/pic03.jpg" alt="Picture of a mountain">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum voluptatum, vitae ipsum placeat qui
+                    voluptas quia laudantium ipsam cupiditate odit.</p>
+                <button>FULL STORY</button>
+            </div>
         </div>
 
     </main>
     <footer>
-        <div class="footer-left">
-            <form action="">
-                <label for="name">NAME</label>
-                <input type="text" id="name">
-                <label for="email">EMAIL</label>
-                <input type="text" id="email">
-                <label for="message">message</label>
-                <input type="text" id="message">
-                <button>SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="footer-right">
-            <div class="first">
-                <p>adress</p>
-                <div class="then1">
-                    <p>1234 Somewhere road #87257</p>
-                    <p>Nashville, TN 00000-0000</p>
-                </div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <form action="">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name">
+                    <label for="email">EMAIL</label>
+                    <input type="text" id="email">
+                    <label for="message" id="message">message</label>
+                    <textarea type="text" id="message"></textarea>
+                    <button>SEND MESSAGE</button>
+                </form>
             </div>
-            <div class="second">
-                <p>Phone</p>
-                <div class="then2">
+            <div class="footer-right">
+                <div class="first">
+                    <span>address</span>
+
+                    <p><br>1234 Somewhere road #87257<br>Nashville, TN 00000-0000</p>
+
+                </div>
+                <div class="second">
+                    <span>Phone</span>
+
                     <p>(000)000-000</p>
+
                 </div>
-            </div>
-            <div class="third">
-                <p>Email</p>
-                <div class="then3">
+                <div class="third">
+                    <span>Email</span>
+
                     <p>info@untitled.ltd</p>
+
                 </div>
-            </div>
-            <div class="fourth">
-                <p>Social</p>
-                <div class="then4">
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-github"></i>
+                <div class="fourth">
+                    <span>Social</span>
+                    <div class="icone">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
                 </div>
             </div>
         </div>

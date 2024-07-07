@@ -1,0 +1,107 @@
+footer {
+    background: rgb(233, 233, 233);
+    width: 80%;
+    position: relative;
+    margin: 30px auto 70px;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .footer-left {
+            padding: 60px 0;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 65%;
+                margin: 0 auto;
+
+                label {
+                    margin-bottom: 20px;
+                    @include title();
+                    font-size: 11px;
+                    color: $grey;
+                }
+                input {
+                    margin-bottom: 20px;
+                    background: none;
+                    border: 1px solid rgba(105, 105, 105, 0.25);
+                    border-radius: 5px;
+                    height: 40px;
+                    width: 100%;
+                }
+                textarea {
+                    height: 200px;
+                    max-width: 100%;
+                    margin-bottom: 40px;
+                    border-radius: 5px;
+                    background: none;
+                    border: 1px solid rgba(105, 105, 105, 0.25);
+                    resize: none;
+                }
+
+                button {
+                    color: $grey;
+                    border: 2px solid $grey;
+                    background: none;
+                }
+            }
+        }
+
+        .footer-right::before {
+            content: "";
+            @include line();
+            width: 1px;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .footer-right {
+            display: grid;
+            grid-template-rows: 25% 25% 25% 25%;
+            position: relative;
+
+            & > div {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                align-items: center;
+                position: relative;
+                text-align: left;
+
+                &::after {
+                    content: "";
+                    @include line();
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+
+                span {
+                    @include title();
+                    color: $grey;
+                    font-size: 11px;
+
+                    padding-left: 40px;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 26px;
+                    color: $grey;
+                    padding-left: 40px;
+                }
+                .icone {
+                    padding-left: 40px;
+                    i {
+                        padding: 10px;
+                        border: 1px solid rgba(105, 105, 105, 0.25);
+                        border-radius: 150px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
