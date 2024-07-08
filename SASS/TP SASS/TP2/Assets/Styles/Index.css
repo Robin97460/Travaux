@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "allura";
+  src: url(../Font/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../Font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../Font/Poppins-Medium.ttf);
+}
+body {
+  background: rgb(33, 32, 30);
+  font-family: "roboto", serif;
+  font-weight: 400;
+}
+body #icone {
+  height: 30px;
+  width: 30px;
+}
+
+header {
+  background: url(../Images/Header/bg-slider-06.jpg) center/cover;
+  height: 100vh;
+  color: rgb(238, 238, 238);
+  padding: 0 50px;
+}
+header nav {
+  display: grid;
+  grid-template-columns: 10% 82% 8%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12vh;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header nav span {
+  font-family: "allura", cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  color: rgb(238, 238, 238);
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+header nav #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 0.7rem;
+}
+header nav #icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 0.8rem;
+  line-height: 13px;
+}
+header nav #icone i {
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header nav #icone i:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 88vh;
+}
+header .header-container > div {
+  margin-top: -150px;
+  text-align: center;
+}
+header .header-container > div h2 {
+  font-family: "allura", cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  font-weight: 100;
+  font-size: 3rem;
+}
+header .header-container > div h1 {
+  font-family: "poppins", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  letter-spacing: 10px;
+  margin-top: -28px;
+}
+header .header-container > div img {
+  height: 30px;
+  width: 30px;
+  margin: 40px 0;
+}
+header .header-container > div p {
+  letter-spacing: 6px;
+  font-size: 0.75rem;
+}
+
+main #section1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: rgb(238, 238, 238);
+}
+main #section1 .left-part {
+  text-align: center;
+  margin: 15px;
+  border: 0.8px dashed rgb(166, 114, 69);
+  padding: 30px 15px;
+}
+main #section1 .left-part h4 {
+  font-family: "allura", cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  font-size: 2rem;
+  font-weight: 500;
+}
+main #section1 .left-part h3 {
+  font-family: "poppins", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: -13px;
+}
+main #section1 .left-part #icone {
+  margin: 30px 0;
+}
+main #section1 .left-part p {
+  margin-bottom: 20px;
+}
+main #section1 .left-part h5 {
+  font-size: 1rem;
+  margin: 10px 0 3px;
+  font-weight: 100;
+  font-family: "poppins", serif;
+}
+main #section1 .left-part h6 {
+  color: rgb(182, 182, 182);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+main #section1 .left-part #head {
+  height: 70px;
+  border-radius: 1500px;
+}
+main #section1 .right-part {
+  width: 100%;
+  height: 100%;
+  background: url(../Images/Section1/store-01.jpg) center/cover;
+}
+main #menu {
+  text-align: center;
+  margin: 60px 0 80px;
+  padding-bottom: 120px;
+  position: relative;
+}
+main #menu h4 {
+  font-family: "allura", cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  font-size: 2rem;
+  font-weight: 500;
+}
+main #menu #icone {
+  margin: 40px 0 30px;
+}
+main #menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(238, 238, 238);
+  width: 75%;
+  margin: 0 auto 30px;
+}
+main #menu ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+main #menu .menu-container {
+  background: rgb(238, 238, 238);
+  border-top: 4px solid rgb(166, 114, 69);
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  padding: 15px 0;
+  position: relative;
+  z-index: 1000;
+}
+main #menu .menu-container > div {
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  margin: 0 20px;
+  padding: 30px 0;
+  border-bottom: 0.8px dashed black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main #menu .menu-container > div img {
+  border-radius: 1500px;
+  width: 100%;
+  height: 100%;
+}
+main #menu .menu-container > div .txt {
+  text-align: left;
+  padding: 0 10px;
+}
+main #menu .menu-container > div .txt h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+main #menu .menu-container > div span {
+  color: rgb(166, 114, 69);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+main #menu::after {
+  content: "";
+  position: absolute;
+  background: url(../Images/Menu/bg-menu-01.jpg) center center/cover;
+  height: 620px;
+  width: 100%;
+  bottom: -330px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}/*# sourceMappingURL=Index.css.map */

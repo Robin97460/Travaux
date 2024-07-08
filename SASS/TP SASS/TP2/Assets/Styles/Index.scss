@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+$white: rgb(238, 238, 238);
+$grey: rgb(33, 32, 30);
+$black: black;
+$orange: rgb(166, 114, 69);
+
+@font-face {
+    font-family: "allura";
+    src: url(../Font/Allura-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../Font/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../Font/Poppins-Medium.ttf);
+}
+
+@mixin allura {
+    font-family: "allura", cursive;
+    color: $orange;
+    font-weight: 100;
+}
+
+@mixin title {
+    font-family: "poppins", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+body {
+    background: $grey;
+    font-family: "roboto", serif;
+    font-weight: 400;
+    #icone {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@import "./Layout/header";
+
+main {
+    #section1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: $white;
+
+        .left-part {
+            text-align: center;
+            margin: 15px;
+            border: 0.8px dashed $orange;
+            padding: 30px 15px;
+
+            h4 {
+                @include allura();
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            h3 {
+                @include title();
+                font-size: 1.2rem;
+                margin-top: -13px;
+            }
+
+            #icone {
+                margin: 30px 0;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                font-size: 1rem;
+                margin: 10px 0 3px;
+                font-weight: 100;
+                font-family: "poppins", serif;
+            }
+
+            h6 {
+                color: rgb(182, 182, 182);
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+
+            #head {
+                height: 70px;
+                border-radius: 1500px;
+            }
+        }
+
+        .right-part {
+            width: 100%;
+            height: 100%;
+            background: url(../Images/Section1/store-01.jpg) center/cover;
+        }
+    }
+
+    #menu {
+        text-align: center;
+        margin: 60px 0 80px;
+        padding-bottom: 120px;
+        position: relative;
+        h4 {
+            @include allura();
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        #icone {
+            margin: 40px 0 30px;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: $white;
+            width: 75%;
+            margin: 0 auto 30px;
+
+            li {
+                padding: 8px 0;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        .menu-container {
+            background: $white;
+            border-top: 4px solid $orange;
+            width: 85%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            padding: 15px 0;
+            position: relative;
+            z-index: 1000;
+
+            & > div {
+                display: grid;
+                grid-template-columns: 25% 60% 15%;
+                margin: 0 20px;
+                padding: 30px 0;
+                border-bottom: 0.8px dashed $black;
+                align-items: center;
+
+                img {
+                    border-radius: 1500px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .txt {
+                    text-align: left;
+                    padding: 0 10px;
+
+                    h5 {
+                        font-size: 0.8rem;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                }
+                span {
+                    color: $orange;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(../Images/Menu/bg-menu-01.jpg) center center/cover;
+            height: 620px;
+            width: 100%;
+            bottom: -330px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
