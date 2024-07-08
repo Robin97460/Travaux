@@ -1,0 +1,462 @@
+main {
+    #section1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: $white;
+
+        .left-part {
+            text-align: center;
+            margin: 15px;
+            border: 0.8px dashed $orange;
+            padding: 30px 15px;
+
+            h4 {
+                @include allura();
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            h3 {
+                @include title();
+                font-size: 1.2rem;
+                margin-top: -13px;
+            }
+
+            #icone {
+                margin: 30px 0;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                font-size: 1rem;
+                margin: 10px 0 3px;
+                font-weight: 100;
+                font-family: "poppins", serif;
+            }
+
+            h6 {
+                color: rgb(182, 182, 182);
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+
+            #head {
+                height: 70px;
+                border-radius: 1500px;
+            }
+        }
+
+        .right-part {
+            width: 100%;
+            height: 100%;
+            background: url(../Images/Section1/store-01.jpg) center/cover;
+        }
+    }
+
+    #menu {
+        text-align: center;
+        margin: 60px 0 80px;
+        padding-bottom: 120px;
+        position: relative;
+        h4 {
+            @include allura();
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        #icone {
+            margin: 40px 0 30px;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: $white;
+            width: 75%;
+            margin: 0 auto 30px;
+
+            li {
+                padding: 8px 0;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        .menu-container {
+            background: $white;
+            border-top: 4px solid $orange;
+            width: 85%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            padding: 15px 0;
+            position: relative;
+            z-index: 1000;
+
+            @media screen and (max-width: 680px) {
+                display: block;
+            }
+
+            & > div {
+                display: grid;
+                grid-template-columns: 25% 60% 15%;
+                margin: 0 20px;
+                padding: 30px 0;
+                border-bottom: 0.8px dashed $black;
+                align-items: center;
+
+                img {
+                    border-radius: 1500px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .txt {
+                    text-align: left;
+                    padding: 0 10px;
+
+                    h5 {
+                        font-size: 0.8rem;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                }
+                span {
+                    color: $orange;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(../Images/Menu/bg-menu-01.jpg) center center/cover;
+            height: 620px;
+            width: 100%;
+            bottom: -330px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #reservation {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        max-width: 1050px;
+        width: 95%;
+        margin: 0 auto;
+        background: $black;
+
+        @media screen and (max-width: 850px) {
+            display: block;
+            padding-top: 1px;
+            margin-bottom: 135px;
+        }
+        h4 {
+            @include allura();
+            font-size: 2.5rem;
+        }
+        img {
+            margin: 35px 0;
+        }
+
+        .time {
+            text-align: center;
+            margin: 25px;
+            padding: 20px 0;
+            border: 0.8px dashed $white;
+            h3 {
+                @include title();
+                font-size: 1.4rem;
+                color: $white;
+                font-weight: 100;
+                margin-top: -15px;
+            }
+            h5 {
+                @include title();
+                font-size: 1.1rem;
+                font-weight: 100;
+                color: $orange;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 0.8rem;
+                color: $white;
+                margin-bottom: 35px;
+            }
+        }
+        .booking {
+            background: $white;
+            text-align: center;
+            padding: 80px 0;
+            h3 {
+                @include title();
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-top: -20px;
+            }
+            form {
+                display: grid;
+                grid-template-columns: 33% 34% 33%;
+                grid-template-rows: 50% 50%;
+                width: 530px;
+                margin: 0 auto;
+
+                input,
+                select {
+                    background: none;
+                    border: none;
+                    border-bottom: 0.8px solid $grey2;
+                    width: 160px;
+                    padding-bottom: 10px;
+                    margin-bottom: 30px;
+
+                    &::selection {
+                        border: none;
+                    }
+                }
+            }
+            button {
+                font-family: Arial;
+                font-weight: 700;
+                font-size: 0.8rem;
+                color: $white;
+                background: $grey;
+                padding: 15px 35px;
+                border-radius: 30px;
+                border: none;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: translateX(10px);
+                    box-shadow: 0 0 20px 0 $grey;
+                }
+            }
+        }
+    }
+    #event {
+        margin: 120px auto 160px;
+        max-width: 1050px;
+        width: 95%;
+        text-align: center;
+
+        @media screen and (max-width: 680px) {
+            display: none;
+        }
+        h2 {
+            @include allura();
+            font-weight: 100;
+            font-size: 2.5rem;
+        }
+        h3 {
+            @include title();
+            color: $white;
+            font-weight: 900;
+            font-size: 2rem;
+            margin-top: -12px;
+            letter-spacing: 2px;
+        }
+        img {
+            margin: 40px 0 35px;
+        }
+        .event-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 50% 50%;
+            gap: 20px;
+            grid-template-areas:
+                "NP T"
+                "DJ T";
+
+            .NP {
+                .left {
+                    background: url(../Images/Event/event-01.jpg) center
+                        center/cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .DJ {
+                grid-area: DJ;
+                .left {
+                    background: url(../Images/Event/event-02.jpg) center
+                        center/cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .NP,
+            .DJ {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                .left-container {
+                    background: $grey;
+                    line-height: 22px;
+                    height: 85px;
+                    width: 85px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h4 {
+                        font-weight: 700;
+                        font-size: 1.7rem;
+                        color: $white;
+                    }
+                    h6 {
+                        font-weight: 400;
+                        font-size: 1rem;
+                        color: $white;
+                    }
+                }
+                .right {
+                    background: $white;
+                    text-align: left;
+                    padding: 35px 20px;
+                    h5 {
+                        padding-left: 10px;
+                    }
+                    p {
+                        margin: 20px 0 30px;
+                    }
+                }
+            }
+
+            .JN {
+                grid-area: T;
+                background: url(../Images/Event/event-03.jpg) center/cover;
+                padding: 25px;
+                .container {
+                    background: $white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    padding: 0 12px;
+                    height: 100%;
+                    .top {
+                        background: $grey;
+                        margin: 0 auto;
+                        height: 85px;
+                        width: 85px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        h4 {
+                            font-weight: 700;
+                            font-size: 1.7rem;
+                            color: $white;
+                        }
+                        h6 {
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: $white;
+                        }
+                    }
+                    .bot {
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h5 {
+                            margin: 40px 0 20px;
+                            padding-left: 8px;
+                        }
+                        span {
+                            display: block;
+                            margin-top: 25px;
+                            padding: 40px 0;
+                        }
+                    }
+                }
+            }
+
+            .NP,
+            .DJ,
+            .JN {
+                h5 {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    color: $grey;
+                }
+                p {
+                    color: $grey2;
+                    font-size: 0.875rem;
+                }
+                span {
+                    text-transform: uppercase;
+                    color: $grey;
+                    font-size: 0.813rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    #final {
+        position: relative;
+        padding-bottom: 230px;
+        .final-container {
+            background: $white;
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 65px 70px;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            p {
+                line-height: 30px;
+                &::before {
+                    content: "❝";
+                    font-size: 1.5rem;
+                }
+                &::after {
+                    content: "❞";
+                    font-size: 1.5rem;
+                }
+            }
+            h4 {
+                font-weight: 100;
+                font-size: 1.5rem;
+                margin: 35px 0 15px;
+            }
+            h5 {
+                color: $orange;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+        }
+
+        &::before {
+            content: "";
+            background: url(../Images/FinalSection/avatar-02.jpg) center/cover;
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            left: 50%;
+            height: 60px;
+            width: 60px;
+            transform: translate(-50%, -50%);
+            border-radius: 1500px;
+        }
+        &::after {
+            content: "";
+            background: url(../Images/FinalSection/gmap.jpg) center/cover;
+            height: 350px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

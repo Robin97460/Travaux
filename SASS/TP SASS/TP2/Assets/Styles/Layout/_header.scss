@@ -11,6 +11,11 @@ header {
         height: 12vh;
         max-width: 1100px;
         margin: 0 auto;
+
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 50% 10% 40%;
+            grid-template-areas: "L V I";
+        }
         span {
             @include allura();
             color: $white;
@@ -22,13 +27,20 @@ header {
             text-transform: uppercase;
             justify-content: space-around;
             font-size: 0.7rem;
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
         }
         #icone {
             display: flex;
-            text-transform: uppercase;
+            align-items: center;
             justify-content: space-around;
             font-size: 0.8rem;
             line-height: 13px;
+            width: 100%;
+            @media screen and (max-width: 680px) {
+                grid-area: I;
+            }
 
             i {
                 cursor: pointer;
