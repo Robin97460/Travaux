@@ -32,7 +32,7 @@ p {
     transition: 0.5s ease-out;
 }
 .iconeclick {
-    transform: translate(23vh, -50%);
+    transform: translate(30vh, -50%);
 }
 
 span {
@@ -69,7 +69,7 @@ span {
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     transition: 0.5s ease-out;
 }
 
