@@ -1,4 +1,9 @@
 const counterDisplay = document.querySelector("h1");
+const son = () => {
+    const mp3 = new Audio();
+    mp3.src = "./Enter.mp3";
+    mp3.play();
+};
 let counter = 0;
 
 const bubbleMaker = () => {
@@ -18,6 +23,7 @@ const bubbleMaker = () => {
 
     bubble.addEventListener("click", () => {
         bubble.remove();
+        son();
         counter += 1;
         counterDisplay.textContent = counter;
     });

@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    background: url(./Assets/sunset-219354.jpg) center/cover;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 10vh;
+    width: 90%;
+    left: 5%;
+    top: 0;
+    background: black;
+    color: rgb(255, 234, 0);
+    text-align: center;
+    align-items: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 0.4s;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+main {
+    background: orangered;
+    color: white;
+    padding: 40px;
+}
+
+.txt {
+    font-size: 1rem;
+    text-align: center;
+    font-family: serif;
+    margin: 30px 0;
+}
+.second {
+    margin: 25px 0;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+.second img {
+    width: 100%;
+    height: 100%;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 1.5s;
+}
+.second .txt {
+    padding-left: 5%;
+}
+
+.overcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    background: grey;
+    padding: 20px;
+}
+
+.overcome h2 {
+    margin-bottom: 30px;
+}
+.overcome p {
+    margin-bottom: 50px;
+}
+
+.overcome img {
+    max-height: 500px;
+}
+
+.pop-up {
+    position: absolute;
+    margin: 50px;
+    bottom: 0;
+    right: 0;
+    background: yellow;
+    color: black;
+    padding: 50px;
+    border: 2px solid white;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 200px;
+    box-shadow: -5px 6px 20px 0px black;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: 1s ease-out;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top i {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1500px;
+    width: 20px;
+    height: 20px;
+}
+
+.top i:hover {
+    cursor: pointer;
+    color: blue;
+    border-color: blue;
+}
+
+.pop-up input,
+button {
+    background: rgb(255, 203, 16);
+    padding: 15px;
+    cursor: text;
+    border-radius: 30px;
+}
+button:hover {
+    background: yellowgreen;
+    transition: 0.5s;
+    cursor: pointer;
+}
