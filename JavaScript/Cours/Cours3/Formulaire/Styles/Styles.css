@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgb(233, 243, 241);
+  height: 100vh;
+}
+body main {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70vh;
+  width: 50vh;
+  border-radius: 50px;
+  position: relative;
+}
+body main form::before {
+  content: "";
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 1500px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+body main form {
+  width: 100%;
+  text-align: center;
+}
+body main form > div {
+  margin: 0 auto 50px;
+  width: 80%;
+  position: relative;
+}
+body main form > div input {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: rgb(233, 243, 241);
+  height: 30px;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+body main form > div input:focus {
+  border: 1px solid rgb(168, 255, 235);
+}
+body main form > div label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+body main form > div span {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 0.8rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: red;
+  position: absolute;
+}
+body main form > div p {
+  background: red;
+  width: 33%;
+  height: 6px;
+  margin: 2px 0 2px;
+  border-radius: 50px;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body main form .pseudoC {
+  margin-top: 80px;
+}
+body main button {
+  position: absolute;
+  bottom: 15px;
+  padding: 15px 40px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 4px 13px 0px black;
+          box-shadow: 2px 4px 13px 0px black;
+}
+body main button:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+.progressRed {
+  background: red;
+  width: 33%;
+  visibility: visible;
+}
+
+.progressBlue {
+  background: #16d9e7;
+  width: 67%;
+  visibility: visible;
+}
+
+.progressGreen {
+  width: 100%;
+  background: #5ef9a4;
+  visibility: visible;
+}
+
+.error input {
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.527);
+}
+
+.error span {
+  visibility: visible;
+  opacity: 1;
+  color: red;
+}/*# sourceMappingURL=Styles.css.map */

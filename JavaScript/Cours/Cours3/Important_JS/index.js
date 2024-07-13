@@ -12,34 +12,34 @@ let array2 = ["Bordeaux", 24, true, [1, 2], { nom: "Denis" }];
 // console.log(array2[4].nom);
 
 let objet = {
-  pseudo: "Denis",
-  age: 33,
-  technos: ["Javascript", "React", "NodeJs"],
-  admin: false,
+    pseudo: "Denis",
+    age: 33,
+    technos: ["Javascript", "React", "NodeJs"],
+    admin: false,
 };
 
 // objet.adresse = "22 rue du code";
 // console.log(objet);
 
 let data = [
-  {
-    pseudo: "Denis",
-    age: 33,
-    technos: ["Javascript", "React", "NodeJs"],
-    admin: false,
-  },
-  {
-    pseudo: "Samia",
-    age: 24,
-    technos: ["CSS", "React", "NodeJs"],
-    admin: false,
-  },
-  {
-    pseudo: "Nikola",
-    age: 42,
-    technos: ["Php", "React", "NodeJs"],
-    admin: true,
-  },
+    {
+        pseudo: "Denis",
+        age: 33,
+        technos: ["Javascript", "React", "NodeJs"],
+        admin: false,
+    },
+    {
+        pseudo: "Samia",
+        age: 24,
+        technos: ["CSS", "React", "NodeJs"],
+        admin: false,
+    },
+    {
+        pseudo: "Nikola",
+        age: 42,
+        technos: ["Php", "React", "NodeJs"],
+        admin: true,
+    },
 ];
 // console.log(data[2].pseudo[0]);
 
@@ -47,54 +47,54 @@ let data = [
 // Les structures de controle
 //---------------------------
 if (data[0].age > data[1].age) {
-  // console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
+    // console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
 } else {
-  // Valeur si faux
+    // Valeur si faux
 }
 
 // While
 let w = 0;
 
 while (w < 10) {
-  w++;
-  // console.log("La valeur de w est de : " + w);
+    w++;
+    // console.log("La valeur de w est de : " + w);
 }
 
 // Do while
 let d = 0;
 
 do {
-  d++;
-  // console.log(d);
+    d++;
+    // console.log(d);
 } while (d < 5);
 
 // Les boucles for
 for (const user of data) {
-  // document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
+    // document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
 }
 
 // on déclare la valeur de i | jusqu'où on boucle | on incrémente i si la condition 2 n'est pas remplie
 for (i = 0; i < data.length; i++) {
-  // console.log(i);
-  // console.log(data[i].technos[0]);
-  // document.body.innerHTML += "<h2>" + data[i].technos + "</h2>";
+    // console.log(i);
+    // console.log(data[i].technos[0]);
+    // document.body.innerHTML += "<h2>" + data[i].technos + "</h2>";
 }
 
 // Switch
 document.body.addEventListener("click", (e) => {
-  switch (e.target.id) {
-    case "javascript":
-      document.body.style.background = "yellow";
-      break;
-    case "php":
-      document.body.style.background = "violet";
-      break;
-    case "python":
-      document.body.style.background = "blue";
-      break;
-    default:
-      null;
-  }
+    switch (e.target.id) {
+        case "javascript":
+            document.body.style.background = "yellow";
+            break;
+        case "php":
+            document.body.style.background = "violet";
+            break;
+        case "python":
+            document.body.style.background = "blue";
+            break;
+        default:
+            null;
+    }
 });
 
 //----------------
@@ -226,14 +226,14 @@ let timestamp = Date.parse(date);
 let iso = date.toISOString();
 
 function dateParser(chaine) {
-  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    // hour: "numeric",
-    // minute: "numeric",
-  });
-  return newDate;
+    let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        // hour: "numeric",
+        // minute: "numeric",
+    });
+    return newDate;
 }
 
 // console.log(dateParser(date));
@@ -245,7 +245,7 @@ function dateParser(chaine) {
 //--------------
 
 let moreData = {
-  destVar: ["Element 1", "Element 2"],
+    destVar: ["Element 1", "Element 2"],
 };
 
 const { destVar } = moreData;
@@ -260,9 +260,9 @@ let [x, y, z] = array5;
 // console.log(z);
 
 const dateDestructuring = (chaine) => {
-  let newDate = chaine.split("T")[0];
-  let [y, m, d] = newDate.split("-");
-  return [d, m, y].join("/");
+    let newDate = chaine.split("T")[0];
+    let [y, m, d] = newDate.split("-");
+    return [d, m, y].join("/");
 };
 // console.log(dateDestructuring(iso));
 
