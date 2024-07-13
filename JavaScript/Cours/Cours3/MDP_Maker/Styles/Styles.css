@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./IMG/bg.jpg) center/cover;
+  text-align: center;
+}
+body h1 {
+  color: rgb(255, 255, 255);
+  background: darkblue;
+  padding: 10px 0;
+  margin: 30px auto;
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+body .gen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: darkblue;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 75%;
+}
+body .gen h2 {
+  color: white;
+  margin: 15px 0 5px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+body .gen i {
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+body .gen input[type=text] {
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+body .gen input[type=text]:focus {
+  border: none;
+  display: none;
+}
+body .gen input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 250px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-radius: 50px;
+}
+body .gen input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+body .gen input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.65)), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.65) 0%, rgba(0, 0, 0, 0.95) 100%);
+  border-radius: 18px;
+  -webkit-transform: translateY(-11px);
+          transform: translateY(-11px);
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+body .gen input[type=range]::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  -webkit-transform: scale(1.2) translateY(-9px);
+          transform: scale(1.2) translateY(-9px);
+}
+body .gen #length {
+  background: none;
+  color: white;
+  border: none;
+  text-align: center;
+  width: 50px;
+  font-size: 1.5rem;
+}
+body .gen form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  color: lightcoral;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+body .gen form label {
+  background: lightblue;
+  margin: 0 20px;
+  border-radius: 20px;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body .gen form input {
+  display: none;
+}
+body .gen form input:checked + label {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background-color: greenyellow;
+}
+body .gen button {
+  color: lightcoral;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: lightblue;
+  margin-bottom: 30px;
+  cursor: pointer;
+  -webkit-box-shadow: -5px 2px 12px 0px black;
+          box-shadow: -5px 2px 12px 0px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body .gen button:hover {
+  background: greenyellow;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}/*# sourceMappingURL=Styles.css.map */

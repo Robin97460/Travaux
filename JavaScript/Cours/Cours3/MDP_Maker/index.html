@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Styles/Styles.css">
+    <script defer src="./Index.js"></script>
+    <title>Générateur de MPD</title>
+</head>
+
+<body>
+    <h1>Générateur de Mots De Passes</h1>
+    <div class="gen">
+        <h2 id="mdp">Mots de Passe : </h2>
+        <i class="fa-solid fa-copy"></i>
+        <input type="text" id="motdepasse" value="Veuillez Générer un MDP" readonly>
+
+        <div class="range-container">
+            <input type="range" id="range" max="24" min="4" value="8"
+                oninput="document.getElementById('length').value = this.value">
+            <input type="text" readonly id="length" value="8">
+        </div>
+
+        <form action="">
+
+            <input type="checkbox" id="az" checked>
+            <label for="az">a-z</label>
+
+
+            <input type="checkbox" id="AZ">
+            <label for="AZ">A-Z</label>
+
+            <input type="checkbox" id="numb">
+            <label for="numb">0-9</label>
+
+            <input type="checkbox" id="signe">
+            <label for="signe">!-?</label>
+
+        </form>
+        <button id="button">Générer mon MDP</button>
+    </div>
+</body>
+
+</html>
