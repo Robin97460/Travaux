@@ -1,23 +1,28 @@
 const inputs = document.querySelectorAll(
     `input[type="text"], input[type="password"]`
 );
-const button = document.querySelector("button");
+const button = document.querySelector("input[type='submit']");
+const form = document.querySelector("form");
+
+let Pseudo, Email, PassWord, Confirmation;
 
 const pseudoChecker = (value) => {
     const pseudoContainer = document.querySelector(".pseudoC");
     const errorDisplay = document.querySelector(".pseudoC > span");
     if (value.length > 0 && (value.length < 3 || value.length > 20)) {
-        console.log("t");
         pseudoContainer.classList.add("error");
         errorDisplay.textContent =
             "Le pseudo doit faire entre 3 et 20 caractères";
+        Pseudo = null;
     } else if (!value.match(/^[a-zA-Z0-9_.-]*$/)) {
         pseudoContainer.classList.add("error");
         errorDisplay.textContent =
             "Le pseudo ne peut pas contenir de caractères spéciaux";
+        Pseudo = null;
     } else {
         pseudoContainer.classList.remove("error");
         errorDisplay.textContent = "";
+        Pseudo = value;
     }
 };
 
@@ -26,8 +31,10 @@ const emailChecker = (value) => {
 
     if (value.length === 0 || value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
         emailContainer.classList.remove("error");
+        Email = value;
     } else {
         emailContainer.classList.add("error");
+        Email = null;
     }
 };
 
@@ -39,13 +46,17 @@ const passwordChecker = (value) => {
     if (value.length === 0 || (value.match(/[A-Z]/) && value.match(/[0-9]/))) {
         mdpContainer.classList.remove("error");
         errorDisplay2.textContent = "";
+        PassWord = value;
     } else {
         mdpContainer.classList.add("error");
         errorDisplay2.textContent =
             "Le mot de passe doit contenir au moins une majuscule et un chiffre";
+        PassWord = null;
     }
 
-    if (value.length < 4) {
+    if (value.length === 0) {
+        barre.classList.remove("progressRed");
+    } else if (value.length < 4) {
         barre.classList.remove("progressGreen");
         barre.classList.remove("progressBlue");
         barre.classList.add("progressRed");
@@ -65,8 +76,10 @@ const confirmChecker = (value) => {
     const mdp = document.querySelector(".mdpC > input");
     if (value != mdp.value) {
         confirmContainer.classList.add("error");
+        Confirmation = null;
     } else {
         confirmContainer.classList.remove("error");
+        Confirmation = value;
     }
 };
 
@@ -89,25 +102,23 @@ inputs.forEach((input) => {
                 nul;
         }
     });
-    button.addEventListener("click", () => {
-        let data = [];
-        data.push(pseudo.value);
-        data.push(EMAIL.value);
-        data.push(mdpInput.value);
-        if (
-            pseudo.value.length >= 3 &&
-            pseudo.value.match(/^[a-zA-Z0-9_.-]*$/) &&
-            EMAIL.value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i) &&
-            mdpInput.value.match(/[A-Z]/) &&
-            mdpInput.value.match(/[0-9]/) &&
-            confirm.value != mdpInput.value
-        ) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const submitContainer = document.querySelector(".submit");
+        if (Pseudo && Email && PassWord && Confirmation) {
+            const data = {
+                pseudo: pseudo.value,
+                email: EMAIL.value,
+                mdp: mdpInput.value,
+            };
             console.log(data);
-            main.location.reload();
+            pseudo.value = null;
+            EMAIL.value = null;
+            mdpInput.value = null;
+            confirm.value = null;
+            submitContainer.classList.remove("error");
         } else {
-            alert("veuillez remplir le formulaire selon les critères");
+            submitContainer.classList.add("error");
         }
     });
 });
-
-//

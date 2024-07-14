@@ -69,6 +69,12 @@ body {
                     color: red;
                     position: absolute;
                 }
+                #remplir {
+                    width: 70%;
+                    margin: 30px 15% 0;
+                    font-size: 1rem;
+                    text-align: center;
+                }
                 p {
                     background: red;
                     width: 33%;
@@ -83,9 +89,10 @@ body {
                 margin-top: 80px;
             }
         }
-        button {
-            position: absolute;
-            bottom: 15px;
+        input[type="submit"] {
+            height: 100%;
+            width: 60%;
+            margin-top: -20px;
             padding: 15px 40px;
             background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             border: none;

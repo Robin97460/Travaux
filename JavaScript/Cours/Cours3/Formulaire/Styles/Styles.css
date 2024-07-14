@@ -89,6 +89,12 @@ body main form > div span {
   color: red;
   position: absolute;
 }
+body main form > div #remplir {
+  width: 70%;
+  margin: 30px 15% 0;
+  font-size: 1rem;
+  text-align: center;
+}
 body main form > div p {
   background: red;
   width: 33%;
@@ -102,9 +108,10 @@ body main form > div p {
 body main form .pseudoC {
   margin-top: 80px;
 }
-body main button {
-  position: absolute;
-  bottom: 15px;
+body main input[type=submit] {
+  height: 100%;
+  width: 60%;
+  margin-top: -20px;
   padding: 15px 40px;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   border: none;
@@ -114,7 +121,7 @@ body main button {
   -webkit-box-shadow: 2px 4px 13px 0px black;
           box-shadow: 2px 4px 13px 0px black;
 }
-body main button:hover {
+body main input[type=submit]:hover {
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
 }
