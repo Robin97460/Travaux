@@ -228,7 +228,7 @@ let iso = date.toISOString();
 function dateParser(chaine) {
     let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
         year: "numeric",
-        month: "long",
+        month: "numeric",
         day: "numeric",
         // hour: "numeric",
         // minute: "numeric",
