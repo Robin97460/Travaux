@@ -32,7 +32,7 @@ function display() {
         .map(
             (country) =>
                 `
-        <div class="card">"
+        <div class="card">
             <img src="${country.flags.svg}">
             <h1>${country.translations.fra.common}</h1>
             <h2>${country.capital}</h2>
