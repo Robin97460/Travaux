@@ -218,11 +218,11 @@ arrayNumber.push(17);
 // Date classique
 let date = new Date();
 
-// Timestamp
+// Timestamp secondes
 let timestamp = Date.parse(date);
 // console.log(timestamp);
 
-// IsoString
+// IsoString chaine de caractère
 let iso = date.toISOString();
 
 function dateParser(chaine) {
