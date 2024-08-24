@@ -33,7 +33,7 @@ function display() {
             (country) =>
                 `
         <div class="card">
-            <img src="${country.flags.svg}">
+            <img src="${country.flags.svg}" alt="Drapeau : ${country.translations.fra.common}">
             <h1>${country.translations.fra.common}</h1>
             <h2>${country.capital}</h2>
             <p>Population : ${country.population}</p>
