@@ -40,7 +40,7 @@ input[type="range"] {
     border-radius: 20px;
     padding: 20px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        "Lucida Sans Unicode";
 }
 img {
     height: 100px;

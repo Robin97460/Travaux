@@ -26,11 +26,11 @@ window.addEventListener("mousemove", (e) => {
 });
 
 window.addEventListener("mousedown", () => {
-    mouse.style.transition = "0.5s";
+    mouse.style.transition = "0.3s";
     mouse.style.transform = "scale(4) translate(-12.5%, -12.5%)";
 });
 window.addEventListener("mouseup", () => {
-    mouse.style.transition = "0.5s";
+    mouse.style.transition = "0.3s";
     mouse.style.transform = "scale(1) translate(-50%, -50%)";
 });
 

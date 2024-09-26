@@ -9,17 +9,17 @@ var txt = "texte";
 // Constante :
 const prenom = "Ju";
 
-console.log(txt);
-console.log(prenom);
+// console.log(txt);
+// console.log(prenom);
 
 let nombre = 2;
 
-console.log(nombre);
-nombre = 5;
-console.log(nombre);
+// console.log(nombre);
+// nombre = 5;
+// console.log(nombre);
 
 let newtxt = txt + " " + prenom;
-console.log(newtxt);
+// console.log(newtxt);
 
 let othertxt = `ok c'est stylé ${prenom} , t'es vraiment la meilleur`;
 
@@ -39,7 +39,7 @@ let not_assigned;
 not_assigned = 86;
 
 // Controle
-let x = 2;
+let x = 9;
 let y = 2;
 
 // if (x > y) {
